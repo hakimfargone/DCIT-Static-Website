@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Zeyada');
+
+:root {
+  --background: rgba(163, 163, 163, 0.65);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-color: gainsboro;
+}
+
+/* navigation styles start here */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: rgb(0, 0, 0);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: rgb(182, 182, 182);
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.main {
+  width: 100;
+  background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%) ,url(https://buckssport.org/wp-content/uploads/2021/01/Return_of_Sports.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 109vh;
+}
+
+
+/* Footer Code */
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+   background-color: #8792af;
+   padding: 70px 0;
+}
+.footer-col {
+   width: 25%;
+   padding: 0 15px;
+
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+   bottom: -10px;
+   background-color: #ffffff;
+   height: 2px;
+   box-sizing: border-box;
+   width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+   margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  display: block;
+  transition: all .3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: rgb(255, 255, 255);
+  padding-left: 8px;
+}
+
+.footer-col .social-media a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-media a:hover {
+  color: #24262b;
+  background-color: #e91e63;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}                                                                                                                                              
